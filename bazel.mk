@@ -171,6 +171,7 @@ export BAZEL_RC
 endif
 
 bazelisk: # Download bazelisk
+	mkdir tools
 	curl -sLo tools/bazelisk-darwin-amd64 https://github.com/bazelbuild/bazelisk/releases/download/v$(.BAZELISK_VERSION)/bazelisk-darwin-amd64
 	curl -sLo tools/bazelisk-linux-amd64 https://github.com/bazelbuild/bazelisk/releases/download/v$(.BAZELISK_VERSION)/bazelisk-linux-amd64
 	chmod +x ./tools/bazelisk-darwin-amd64
