@@ -189,5 +189,5 @@ init: # Generate the initial files to run bazel
 	@echo "modify this line into BUILD.bazel"
 	@echo '	    prefix = "github.com/MY_ORG/MY_REPO"'
 
-remote:
+remote: |bazelisk
 	@$(.BAZEL) build --config=mycluster-ubuntu16-04 //...
